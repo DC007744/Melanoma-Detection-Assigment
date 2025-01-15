@@ -3,21 +3,14 @@
 ## 1. Introduction
 This project aims to classify skin lesion images (from the ISIC dataset) into multiple classes (e.g., different skin cancer types, including melanoma). We use a Convolutional Neural Network (CNN) model built in TensorFlow/Keras to detect and classify these lesions.
 
-## 2. Project Structure
-- **melanoma_detection.ipynb**: Jupyter notebook containing all the code, from data reading to model training.
-- **melanoma_detection.py**: Python script version of the same code (if required).
-- **report.pdf**: A PDF document summarizing the findings, challenges, and conclusions.
-- **data/**: (Optional) Folder containing the dataset if it’s not too large, or a note on how to download it.
-- **README.md**: Current file describing the project.
-
-## 3. Dataset
-- **Dataset Source**: Skin cancer ISIC - The International Skin Imaging Collaboration (link if available).
+## 2. Dataset
+- **Dataset Source**: Skin cancer ISIC - The International Skin Imaging Collaboration.
 - **Classes**: 9 classes representing various skin cancer types, including melanoma.
 - **Folder Structure**:
   - `Train/` with subfolders for each class.
   - `Test/` with unseen images for final model evaluation.
 
-## 4. Approach
+## 3. Approach
 1. **Data Reading & Understanding**  
    - Paths defined for `train_dir` and `test_dir`.  
    - Basic stats on class distribution.
@@ -43,20 +36,3 @@ This project aims to classify skin lesion images (from the ISIC dataset) into mu
 7. **Handling Class Imbalance**  
    - Used `RandomOverSampler` to oversample minority classes.  
    - Retrained the same CNN and compared performance metrics.
-
-8. **Evaluation & Results**  
-   - Final accuracy, confusion matrix, and classification report on the validation set.  
-   - Observations about how augmentation and oversampling impacted performance.
-
-## 5. Findings
-- **Baseline Model**: [Summary of accuracy/loss]
-- **Augmented Model**: [Summary of changes in accuracy, any improvement in minority classes?]
-- **Balanced Model**: [Summary of how oversampling influenced each class’s performance]
-
-## 6. Conclusion
-- **Overfitting or Underfitting**: Whether it was resolved by augmentation or not.  
-- **Next Steps**: Potential improvements (e.g., hyperparameter tuning, deeper architectures, more sophisticated data balancing techniques).
-
-## 7. Assumptions
-- All images are RGB.  
-- The dataset folders are structured as described: one folder per class in `Train/`.
